@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Vendedores</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card bg-light mt-5">
+            <article class="card-body mx-auto" style="max-width: 1000px;">
+                <h4 class="card-title mt-3 text-center">Gerenciamento de Vendedores</h4>
+                <p class="text-center">Edite ou exclua vendedores da lista abaixo</p>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col">Data de Nascimento</th>
+                            <th scope="col">CNPJ</th>
+                            <th scope="col">Senha</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Exemplo de vendedor -->
+                        <tr>
+                            <td>João Silva</td>
+                            <td>joao.silva@email.com</td>
+                            <td>(47) 99999-9999</td>
+                            <td>01/01/1980</td>
+                            <td>12.345.678/0001-99</td>
+                            <td>••••••••</td>
+                            <td>
+                                <button class="btn btn-warning btn-sm">Editar</button>
+                                <button class="btn btn-danger btn-sm">Excluir</button>
+                            </td>
+                        </tr>
+                        <!-- Fim do exemplo de vendedor -->
+                        <!-- Mais vendedores podem ser adicionados aqui -->
+                    </tbody>
+                </table>
+            </article>
+        </div> <!-- card.// -->
+    </div> <!-- container.// -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
