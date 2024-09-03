@@ -14,7 +14,7 @@ $sql = "INSERT INTO usuario (nome, email, telefone, dataNascimento, cnpj, senha)
 if ($stmt = $conn->prepare($sql)){
     $stmt->bind_param("ssssss", $nome, $email, $telefone, $dataNascimento, $cnpj, $senha);
     if($stmt->execute()){
-        echo "Novo usuário cadastrado com sucesso.";
+        echo "Novo vendedor cadastrado com sucesso.";
     } else {
 echo "Erro:" . $stmt->error;
     }
