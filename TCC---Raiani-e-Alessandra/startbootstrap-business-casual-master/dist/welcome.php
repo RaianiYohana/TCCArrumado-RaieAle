@@ -6,7 +6,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit;
 }
 
-echo "Bem-vindo!" . $_SESSION['nome'] . "!";
+echo "Bem-vindo," . $_SESSION['nome'] . "!";
 
 ?>
 
