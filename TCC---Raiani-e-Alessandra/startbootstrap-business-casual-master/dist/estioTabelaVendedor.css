@@ -1,0 +1,173 @@
+body {
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #446442;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #ebf0eb;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.panel-heading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #011102;
+}
+
+#forgot {
+    min-width: 100px;
+    margin-left: auto;
+    text-decoration: none;
+    font-weight: bold;
+    color: #183a0f;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.form-inline label {
+    padding-left: 10px;
+    margin: 0;
+    cursor: pointer;
+    color: #011102;
+}
+
+.btn.btn-primary {
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #183a0f;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+    background-color: #145a12;
+}
+
+.panel {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.input-field {
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    color: #011102;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:hover {
+    border-color: #183a0f;
+}
+
+input[type='text'],
+input[type='password'] {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    color: #011102;
+}
+
+.fa-eye-slash.btn {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+.bordert {
+    border-top: 1px solid #aaa;
+    position: relative;
+}
+
+.bordert:after {
+    content: "ou conecte-se com";
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ebf0eb;
+    padding: 0 8px;
+    color: #011102;
+}
+
+.btn-update {
+    background-color: #3073499c;
+    margin-bottom: 5%;
+    color: #ffffff;
+}
+
+@media (max-width: 360px) {
+    #forgot {
+        margin-left: 0;
+        padding-top: 10px;
+        font-size: 14px;
+    }
+
+    body {
+        height: 100%;
+    }
+
+    .container {
+        margin: 30px 0;
+    }
+
+    .bordert:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.btn-primary {
+    border: none;
+}
+
+.btn-primary:focus {
+    background-color: #102208c5;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 0 0 black;
+}
+
+.container2 {
+    background-color: #ebf0eb;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: auto;
+}
+
+.btn-update,.btn-danger {
+    align-items: center;
+    margin-right: 2em;
+    
+}
+.btn-danger{
+    margin-top: -0.81em;
+}

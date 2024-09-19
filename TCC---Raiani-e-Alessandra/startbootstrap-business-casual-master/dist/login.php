@@ -23,10 +23,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 header("location: ./welcome.php");
             } else {
-                echo "Senha incorreta!;"
+                echo "Senha incorreta!";
             }
         } else {
-        echo "Nenhum usuário encontrado com esse nome!"
+        echo "Nenhum usuário encontrado com esse nome!";
         }
         $stmt->close();
     }
