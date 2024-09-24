@@ -40,7 +40,9 @@ include 'db_connection.php';
                         echo "<td>" . $row['descricao'] . "</td>";
                         echo "<td>" . $row['aro'] . "</td>";
                         echo "<td>" . $row['preco'] . "</td>";
-                        echo "<td>". $row['marca'] . "</td>";
+                        echo "<td>". $row['marca'] . "</td>";  
+                        echo "<a href='excluirProduto.php?id=" .$row['id']."'class='botaoExcluir' onclick='return confirm(\"Deseja excluir o vendedor?\")'> Excluir Produto </a>";
+                        echo "<a href='editarProduto.php?id=" .$row['id']."'class='botaoEditar''> Editar Produto </a>";
                         echo "</td>";
                         echo "</tr>";
                     }
