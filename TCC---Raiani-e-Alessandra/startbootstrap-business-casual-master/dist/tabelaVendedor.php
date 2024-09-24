@@ -41,6 +41,7 @@ include 'db_connection.php';
                         echo "<td>" . $row['telefone'] . "</td>";
                         echo "<td>" . $row['dataNascimento'] . "</td>";
                         echo "<td>". $row['cnpj'] . "</td>";
+                        echo "<a href='excluir.php?id=" .$row['id']."'class='botaoExcluir' onclick='return confirm(\"Deseja excluir o vendedor?\")'> Excluir </a>";
                         echo "</td>";
                         echo "</tr>";
                     }
@@ -53,6 +54,14 @@ include 'db_connection.php';
         
         <div class="mt-3">
             <a href="cadastro1.html" class="btn btn-primary">Voltar para o cadastro!</a>
+        </div>
+<br>
+        <div class="botaoEditar">
+            <a href="" class="btn btn-primary">Editar Vendedor</a>
+        </div>
+        <br>
+        <div class="botaoExcluir">
+            <a href="" class="btn btn-primary">Excluir Vendedor</a>
         </div>
     </div>
 
