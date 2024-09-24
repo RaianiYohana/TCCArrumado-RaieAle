@@ -42,6 +42,7 @@ include 'db_connection.php';
                         echo "<td>" . $row['dataNascimento'] . "</td>";
                         echo "<td>". $row['cnpj'] . "</td>";
                         echo "<a href='excluir.php?id=" .$row['id']."'class='botaoExcluir' onclick='return confirm(\"Deseja excluir o vendedor?\")'> Excluir </a>";
+                        echo "<a href='editarVendedor.php?id=" .$row['id']."'class='botaoEditar' '> Editar </a>";
                         echo "</td>";
                         echo "</tr>";
                     }
