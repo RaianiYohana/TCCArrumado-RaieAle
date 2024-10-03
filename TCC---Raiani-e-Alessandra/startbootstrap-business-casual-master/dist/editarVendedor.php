@@ -1,7 +1,10 @@
 <?php
-include 'db_connection';
+include 'db_connection.php';
 
 $id = $_GET['id'];
+
+$vendedor = $conn->query("select * from usuario where id = $id")->fetch_assoc();
+
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $nome = $_POST['nome'];
@@ -16,8 +19,7 @@ if($conn->query(query: $sql) === TRUE){
 } else {
     echo "Erro ao editar um vendedor" .$sconn->error;
 }
-$sconn->close();
-
+$conn->close();
 }
 ?>
 
@@ -30,28 +32,28 @@ $sconn->close();
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="cadastro1.css"/>
-<title>Cadastro Vendedor</title>
+<title>Edição do Vendedor</title>
 </head>
 <body>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
 <div class="card bg-light">
 <article class="card-body mx-auto" style="max-width: 400px;">
-	<h4 class="card-title mt-3 text-center">Crie sua conta</h4>
-	<p class="text-center">Esteja sempre pronto com a sua conta!</p>
+	<br>
+	<h4 class="card-title mt-3 text-center">Edite seus dados!</h4>
 	
-	<form method="POST" action="cadastro.php">
+	<form method="POST" >
 	<div class="form-group input-group">
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <input name="nome" class="form-control" placeholder="Insira seu nome completo" type="text">
+        <input name="nome" class="form-control" value="<?php echo $vendedor['nome']?>" placeholder="Insira seu nome completo" type="text">
     </div> 
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
 		 </div>
-        <input name="email" class="form-control" placeholder="Insira seu endereço e-mail" type="email">
+        <input name="email" class="form-control" value="<?php echo $vendedor['email']?>" placeholder="Insira seu endereço e-mail" type="email">
     </div> 
     <div class="form-group input-group">
     	<div class="input-group-prepend">
@@ -69,11 +71,10 @@ $sconn->close();
 		</div>
 
 		<div class="form-control">
-			<input name="dataNascimento" id="date" type="date" />
+			<input name="dataNascimento" value="<?php echo $vendedor['dataNascimento']?>" id="date" type="date" />
 		</div>
-		
 	</div> 
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-		</div>
+	<div class="form-group" >
+        <input type="submit" class="btn btn-primary btn-block" >   </input>
+    </div>
+
