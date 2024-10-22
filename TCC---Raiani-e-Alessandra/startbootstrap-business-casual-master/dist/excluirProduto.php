@@ -10,4 +10,4 @@ if($conn->query(query: $sql) === TRUE){
 echo "Erro ao excluir o produto!" .$conn->error;
 }  
 $conn->close();
-header(header: "Location: tabelaProduto.php");
+header(header: "Location:tabelaProdutos.php");

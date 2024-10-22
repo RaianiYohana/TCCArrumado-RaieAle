@@ -8,10 +8,10 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
     $preco = $_POST ['preco'];
     $marca = $_POST ['marca'];
     
-    $sql = "INSERT INTO produto (tipo, descricao, aro, preco, marca) VALUES (?,?,?,?,?)";
+    $sql = "INSERT INTO produto (id_tipo, descricao, aro, preco, id_marca) VALUES (?,?,?,?,?)";
 
 if ($stmt = $conn->prepare($sql)){
-    $stmt->bind_param("ssids", $tipo, $descricao, $aro, $preco, $marca);
+    $stmt->bind_param("isidi", $tipo, $descricao, $aro, $preco, $marca);
     if($stmt->execute()){
         echo "Novo produto cadastrado com sucesso.";
     } else {
@@ -21,4 +21,5 @@ echo "Erro: " . $stmt->error;
 }
 }
 $conn->close();
+header(header: "Location: ./cadastroProduto.php");
 ?>

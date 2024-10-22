@@ -59,12 +59,7 @@ $conn->close();
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
 		</div>
-		<select class="custom-select" style="max-width: 120px;">
-		    <option selected="">(47)</option>
-		    <option value="1">(48)</option>
-			<option value="1">(49)</option>
-		</select>
-    	<input name="telefone" class="form-control" placeholder="Insira seu número de telefone" type="text">
+    	<input name="telefone" value="<?php echo $vendedor['telefone']?>" class="form-control" placeholder="Insira seu número de telefone" type="text">
     </div>     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
@@ -75,6 +70,6 @@ $conn->close();
 		</div>
 	</div> 
 	<div class="form-group" >
-        <input type="submit" class="btn btn-primary btn-block" >   </input>
+        <input type="submit" class="btn btn-primary btn-block" > Editar </input>
     </div>
 

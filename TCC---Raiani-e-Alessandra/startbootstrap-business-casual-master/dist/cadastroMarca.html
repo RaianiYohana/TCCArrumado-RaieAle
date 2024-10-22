@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro da Marca</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cadastroProduto.css">
+</head>
+<body>
+    <div class="card bg-light">
+        <article class="card-body mx-auto" style="max-width: 400px;">
+            <h4 class="card-title mt-3 text-center">Cadastro da Marca</h4>
+            <p class="text-center">Insira a marca do produto</p>
+            <form action="cadastroMarca.php" method="post">
+                
+                <!-- Descrição Input -->
+                <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-info-circle"></i> </span>
+                    </div>
+                    <input name="marca" class="form-control" placeholder="Insira a marca" type="text">
+                </div> <!-- form-group// -->
+                
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block"> Cadastrar Marca </button>
+                </div> <!-- form-group// -->            
+                 <p class="text-center">Visualizar a marca! <a href="tabelaMarca.php">Tabela Marca</a>  </p>                                                         
+                                                      
+            </form>
+        </article>
+    </div> <!-- card.// -->
+	
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

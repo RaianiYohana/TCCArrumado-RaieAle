@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 $_SESSION['id'] = $id;
                 $_SESSION['nome'] = $nome;
 
-                header("location: ./welcome.php");
+                header("location: ./cadastroProduto.php");
             } else {
                 echo "Senha incorreta!";
             }
@@ -33,4 +33,4 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 
 $conn->close();
-?>
+?> 
